@@ -1,7 +1,7 @@
 //Dependencies
 var pg = require('pg');
 
-var config = {
+/*var config = {
   user: 'xkqkwwgl',
   database: 'xkqkwwgl',
   password: 'rrZyU3lQ-nrYFvMX3XNEXnGwXsLeUDtB',
@@ -9,7 +9,7 @@ var config = {
   port: 5432,
   max: 50,
   idleTimeoutMillis: 30000
-};
+};*/
 
 var pool = new pg.Pool(config);
 
