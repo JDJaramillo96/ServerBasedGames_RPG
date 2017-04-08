@@ -1,16 +1,6 @@
 //Dependencies
 var pg = require('pg');
 
-/*var config = {
-  user: 'xkqkwwgl',
-  database: 'xkqkwwgl',
-  password: 'rrZyU3lQ-nrYFvMX3XNEXnGwXsLeUDtB',
-  host: 'stampy.db.elephantsql.com',
-  port: 5432,
-  max: 50,
-  idleTimeoutMillis: 30000
-};*/
-
 var pool = new pg.Pool();
 
 //Query function
