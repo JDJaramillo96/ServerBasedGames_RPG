@@ -26,7 +26,7 @@ router.get('/:playerID', function(request, response) {
       character2 = result[0].character_id_2;
       character3 = result[0].character_id_3;
 
-      query = 'SELECT "health_points", "attack_points", "defense_points", "sp_attack_points", "sp_defense_points", "character.character_name", "character.element" FROM "playercharacter" INNER JOIN "character" ON "character.character_id" = "playercharacter.character_id" WHERE "player_id" IN ({0}) AND ("playercharacter.character_id" IN ({1}) OR "playercharacter.character_id" IN ({2}) OR "playercharacter.character_id" IN ({3}));'
+      query = 'SELECT "health_points", "attack_points", "defense_points", "sp_attack_points", "sp_defense_points", "character"."character_name", "character"."element" FROM "playercharacter" INNER JOIN "character" ON "character"."character_id" = "playercharacter"."character_id" WHERE "player_id" IN ({0}) AND ("playercharacter"."character_id" IN ({1}) OR "playercharacter"."character_id" IN ({2}) OR "playercharacter"."character_id" IN ({3}));'
       query = query.replace('{0}',playerID);
       query = query.replace('{1}',character1);
       query = query.replace('{2}',character2);

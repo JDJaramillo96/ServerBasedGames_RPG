@@ -26,10 +26,9 @@ router.post('/:playerID/:characterID', function(request, response) {
 
   try {
     database.query(query, function(result) {
-
       switch (statsToIncrease) {
         case "health_points":
-          ponts = +result[0].health_points + +pointsToAdd;
+          points = +result[0].health_points + +pointsToAdd;
           break;
         case "attack_points":
           points = +result[0].attack_points + +pointsToAdd;

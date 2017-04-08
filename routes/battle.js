@@ -26,11 +26,8 @@ router.post('/:winnerID/:losserID', function(request, response) {
 
   try {
     database.query(query, function(result) {
-      winnerScore = result[0].score;
-      losserScore = result[1].score;
-
-      winnerScore = +winnerScore + +pointsForWinner;
-      losserScore = +losserScore + +pointsForLosser;
+      winnerScore = +result[0].score + +pointsForWinner;
+      losserScore = +result[1].score + +pointsForLosser;
 
       try {
         query = 'UPDATE "leaderboard" SET "score" = {0} WHERE "player_id" = {1};';
