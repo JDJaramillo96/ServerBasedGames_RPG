@@ -2,10 +2,10 @@
 var pg = require('pg');
 
 var config = {
-  user: 'postgres',
-  database: 'RPG',
-  password: 'postgres',
-  host: 'localhost',
+  user: 'xkqkwwgl',
+  database: 'xkqkwwgl',
+  password: 'rrZyU3lQ-nrYFvMX3XNEXnGwXsLeUDtB',
+  host: 'stampy.db.elephantsql.com',
   port: 5432,
   max: 50,
   idleTimeoutMillis: 30000
