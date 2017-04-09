@@ -1,7 +1,17 @@
 //Dependencies
 var pg = require('pg');
 
-var pool = new pg.Pool();
+var config = {
+  user: 'pyfbxoer', //env var: PGUSER
+  database: 'pyfbxoer', //env var: PGDATABASE
+  password: 'mGdikQGCiXVYwAVH6Wggbz3hznN240G8', //env var: PGPASSWORD 
+  host: 'stampy.db.elephantsql.com', // Server hosting the postgres database
+  port: 5432, //env var: PGPORT
+  max: 10,
+  idleTimeoutMillis: 30000
+};
+
+var pool = new pg.Pool(config);
 
 //Query function
 function query (sqlStatement, onCompleted) {
